@@ -57,18 +57,73 @@ textarea {
     resize: vertical;
 }
 
-button {
+button:hover {
+    background-color: #33ff33;
+}
+
+#pong-btn:hover {
+    background-color: #33ff33;
+}
+
+#plan-btn {
+    width: 90%;
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    margin: 20px auto;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#plan-btn::before,
+#plan-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-color: #00ff00;
+}
+
+#plan-btn::before {
+    left: 0;
+}
+
+#plan-btn::after {
+    right: 0;
+}
+
+#plan-btn:hover {
+    background-color: #33ff33;
+}
+
+#pong-canvas {
+    background-color: #000;
+    border: 2px solid #00ff00;
+    display: block;
+    margin: 20px auto;
+}
+
+#back-btn {
     background-color: #00ff00;
     color: #000;
     border: none;
     padding: 10px 20px;
-    cursor: pointer;
     font-family: inherit;
     font-weight: bold;
-    margin-top: 10px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
 }
 
-button:hover {
+#back-btn:hover {
     background-color: #33ff33;
 }
 
