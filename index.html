@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -14,6 +14,8 @@
             <nav class="tabs">
                 <button class="tab-btn active" data-tab="analyse">Analyse</button>
                 <button class="tab-btn" data-tab="historique">Historique</button>
+                <button class="tab-btn" data-tab="map">Map</button>
+                <button class="tab-btn" data-tab="musique">Radio</button>
             </nav>
         </header>
         <main>
@@ -41,9 +43,11 @@
                 <h2>Historique des Analyses</h2>
                 <ul id="history" class="history"></ul>
             </section>
+            <section class="tab-content" id="map-tab">
+                <h2>Map</h2>
+                <a href="https://www.google.fr/maps" target="_blank" id="plan-btn">Plan</a>
+            </section>
         </main>
-        <footer>
-            <p>Attention : Ce n'est pas un outil médical réel. Consultez un professionnel de santé.</p>
         </footer>
     </div>
     <script src="script.js"></script>
