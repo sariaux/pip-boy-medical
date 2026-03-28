@@ -105,6 +105,8 @@ function addToHistory(symptoms, response) {
     }
 }
 
+
+
 document.getElementById('submit-btn').addEventListener('click', async () => {
     const rawSymptoms = document.getElementById('symptoms').value;
     const symptoms = sanitizeInput(rawSymptoms);
@@ -164,6 +166,27 @@ textarea.addEventListener('keydown', (e) => {
         e.preventDefault();
         document.getElementById('submit-btn').click();
     }
+});
+
+// Afficher la photo du corps humain en cliquant sur le bouton Corps
+const corpsBtn = document.getElementById('corps-btn');
+const photoCorps = document.getElementById('photo-corps');
+corpsBtn.addEventListener('click', () => {
+    if (photoCorps.hasAttribute('hidden')) {
+        photoCorps.removeAttribute('hidden');
+        corpsBtn.textContent = 'Masquer corps';
+    } else {
+        photoCorps.setAttribute('hidden', '');
+        corpsBtn.textContent = 'Corps';
+    }
+});
+
+// Assure que le niveau de vie est à 100% une fois la page chargée
+setAllHealthToMax();
+
+// Plan Button
+document.getElementById('plan-btn').addEventListener('click', () => {
+    addToPlanHistory('Ouverture de Google Maps', 'Plan consulté');
 });
 
 // Afficher la photo du corps humain en cliquant sur le bouton Corps
